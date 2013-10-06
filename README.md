@@ -26,7 +26,7 @@ And use with `var comment = require("comment")`
 
 ## API
 
-### module method
+### Module function
 
 ```javascript
 comment.single("comment text");
@@ -38,13 +38,13 @@ Return a single line comment string
 comment.block("comment text");
 /*  comment text  */
 ```
-Return a normal block comment string:
+Return a normal block comment string
 
 ```javascript
 comment.title("comment text");
 /*****  comment text  *****/
 ```
-Return a block comment string like comment title:
+Return a block comment string like comment title
 
 ```javascript
 comment.banner("comment text\nhello world");
@@ -53,5 +53,28 @@ comment.banner("comment text\nhello world");
 *    hello world
 **/
 ```
-Return a banner block comment string:
+Return a banner block comment string
+
+### Prototype function
+
+```javascript
+"comment text".single();
+//  comment text
+
+"comment text".block();
+/*  comment text  */
+
+
+"comment text".title();
+/*****  comment text  *****/
+
+
+"comment text".banner();
+/**
+*    comment text
+*    hello world
+**/
+
+```
+
 
