@@ -1,4 +1,4 @@
-var comment = require('../comment');
+var comment = require('ciment');
 
 console.log('\n--------------- comment module methods -------------------\n');
 console.log(comment.single('hello world'));

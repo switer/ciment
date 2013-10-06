@@ -2,7 +2,7 @@
   "name": "ciment",
   "version": "1.0.0",
   "description": "Javascript comments library",
-  "main": "comment.js",
+  "main": "ciment.js",
   "scripts": {},
   "repository": {
     "type": "git",
