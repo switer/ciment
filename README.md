@@ -22,29 +22,36 @@ For [node](http://nodejs.org) with [npm](http://npmjs.org):
 npm install comment
 ```
 
-And use with `var Color = require("comment")`
+And use with `var comment = require("comment")`
 
 ## API
 
 ### module method
 
 ```javascript
-comment.single("comment text")
+comment.single("comment text");
+//  comment text
 ```
-Return a single line comment string "//  comment text"
+Return a single line comment string
 
 ```javascript
-comment.block("comment text")
+comment.block("comment text");
+/*  comment text  */
 ```
-Return a normal block comment string "/*  comment text  */"
+Return a normal block comment string:
 
 ```javascript
-comment.title("comment text")
+comment.title("comment text");
+/*****  comment text  *****/
 ```
-Return a block comment string like comment title "/*****  comment text  *****/"
+Return a block comment string like comment title:
 
 ```javascript
-comment.banner("comment text\nhello world")
+comment.banner("comment text\nhello world");
+/**
+*    comment text
+*    hello world
+**/
 ```
-Return a single line comment string "/*\n*    comment text\n*    hello world\n*/"
+Return a banner block comment string:
 
