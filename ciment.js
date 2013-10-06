@@ -2,7 +2,7 @@ var comments = {
         'single': '// @',
         'block':  '/* @ */',
         'block_title': '/*****  @  *****/',
-        'block_banner': '/*\n@\n*/'
+        'block_banner': '/**\n@\n**/'
     },
     config = {
         indent: '    ',
@@ -11,6 +11,10 @@ var comments = {
 
 function wrapComment (content, commentType) {
     return comments[commentType].replace('@', content);
+}
+
+exports.decomment = function (content) {
+    // TODO
 }
 
 /*module export method*/
@@ -24,7 +28,7 @@ exports.title = function (content) {
     return wrapComment(content, 'block_title');
 }
 exports.banner = function (content) {
-    return wrapComment( config.startIndent + content.split('\n').join(config.startIndent), 'block_banner');
+    return wrapComment( config.startIndent + content.split('\n').join('\n' + config.startIndent), 'block_banner');
 }
 
 /*prototype method*/
@@ -38,5 +42,5 @@ String.prototype.title = function () {
     return wrapComment(this, 'block_title');
 }
 String.prototype.banner = function () {
-    return wrapComment( config.startIndent + this.split('\n').join(config.startIndent), 'block_banner');
+    return wrapComment( config.startIndent + this.split('\n').join('\n' + config.startIndent), 'block_banner');
 }
