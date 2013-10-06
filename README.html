@@ -1,3 +1,4 @@
+
 <!DOCTYPE html><html><head><meta charset="utf-8"><style>html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
 
 body{
@@ -120,7 +121,67 @@ body{font-size:16px;}
   p, h2, h3 { orphans: 3; widows: 3; }
   h2, h3 { page-break-after: avoid; }
 }
-</style><title>README</title></head><body><h1 id="comments">comments</h1>
-<p><code>comments</code> is a javascript comments library for generating comment string rapidly.</p>
-<pre><code class="javascript">var comment = var comment = require('../comment');
+</style><title>README</title></head><body><h1 id="ciment">ciment</h1>
+<p><code>ciment</code> is a javascript comments library for generating comment string rapidly.</p>
+<pre><code class="javascript">var comment = var comment = require('../ciment');
+
+// Comment module methods
+comment.single('hello world'); // result: &quot;// hello world&quot;
+comment.block('hello world'); // result: &quot;/* hello world */&quot;
+
+// Prototype module methods
+'hello world'.single(); // result: &quot;// hello world&quot;
+'hello world'.block(); // result: &quot;/* hello world */&quot;
+
+</code></pre>
+
+<h2 id="install">Install</h2>
+<p>For <a href="http://nodejs.org">node</a> with <a href="http://npmjs.org">npm</a>:</p>
+<pre><code class="bash">npm install comment
+</code></pre>
+
+<p>And use with <code>var comment = require("comment")</code></p>
+<h2 id="api">API</h2>
+<h3 id="module-function">Module function</h3>
+<pre><code class="javascript">comment.single(&quot;comment text&quot;);
+//  comment text
+</code></pre>
+
+<p>Return a single line comment string</p>
+<pre><code class="javascript">comment.block(&quot;comment text&quot;);
+/*  comment text  */
+</code></pre>
+
+<p>Return a normal block comment string</p>
+<pre><code class="javascript">comment.title(&quot;comment text&quot;);
+/*****  comment text  *****/
+</code></pre>
+
+<p>Return a block comment string like comment title</p>
+<pre><code class="javascript">comment.banner(&quot;comment text\nhello world&quot;);
+/**
+*    comment text
+*    hello world
+**/
+</code></pre>
+
+<p>Return a banner block comment string</p>
+<h3 id="prototype-function">Prototype function</h3>
+<pre><code class="javascript">&quot;comment text&quot;.single();
+//  comment text
+
+&quot;comment text&quot;.block();
+/*  comment text  */
+
+
+&quot;comment text&quot;.title();
+/*****  comment text  *****/
+
+
+&quot;comment text&quot;.banner();
+/**
+*    comment text
+*    hello world
+**/
+
 </code></pre></body></html>
