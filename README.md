@@ -60,21 +60,24 @@ Return a banner block comment string
 ```javascript
 "comment text".single();
 //  comment text
+```
 
+```javascript
 "comment text".block();
 /*  comment text  */
+```
 
-
+```javascript
 "comment text".title();
 /*****  comment text  *****/
+```
 
-
+```javascript
 "comment text".banner();
 /**
 *    comment text
 *    hello world
 **/
-
 ```
 
 
