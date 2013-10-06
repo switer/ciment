@@ -1,0 +1,21 @@
+{
+  "name": "ciment",
+  "version": "1.0.0",
+  "description": "Javascript comments library",
+  "main": "comment.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/switer/ciment.git"
+  },
+  "keywords": [
+    "comment"
+  ],
+  "email": "guankaishe@gmail.com",
+  "author": "switer",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/switer/ciment/issues"
+  }
+}
