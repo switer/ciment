@@ -2,7 +2,8 @@ var comments = {
         'single': '// @',
         'block':  '/* @ */',
         'block_title': '/*****  @  *****/',
-        'block_banner': '/**\n@\n**/'
+        'block_banner': '/**\n@\n**/',
+        'tag': '<!-- @ -->'
     },
     config = {
         indent: '    ',
@@ -13,34 +14,50 @@ function wrapComment (content, commentType) {
     return comments[commentType].replace('@', content);
 }
 
+function tag (content) {
+    return wrapComment(content, 'tag');
+}
+function single (content) {
+    return wrapComment(content, 'single');
+}
+function block (content) {
+    return wrapComment(content, 'block');
+}
+function title (content) {
+    return wrapComment(content, 'block_title');
+}
+function banner (content) {
+    return wrapComment( config.startIndent + content.split('\n').join('\n' + config.startIndent), 'block_banner');
+}
+
 exports.decomment = function (content) {
     // TODO
 }
 
 /*module export method*/
-exports.single = function (content) {
-    return wrapComment(content, 'single');
-}
-exports.block = function (content) {
-    return wrapComment(content, 'block');
-}
-exports.title = function (content) {
-    return wrapComment(content, 'block_title');
-}
-exports.banner = function (content) {
-    return wrapComment( config.startIndent + content.split('\n').join('\n' + config.startIndent), 'block_banner');
-}
+exports.single = single;
+
+exports.block = block;
+
+exports.title = title;
+
+exports.banner = banner;
+
+exports.tag = tag;
 
 /*prototype method*/
 String.prototype.single = function () {
-    return wrapComment(this, 'single');
+    return single(this);
 }
 String.prototype.block = function () {
-    return wrapComment(this, 'block');
+    return block(this);
 }
 String.prototype.title = function () {
-    return wrapComment(this, 'block_title');
+    return title(this);
 }
 String.prototype.banner = function () {
-    return wrapComment( config.startIndent + this.split('\n').join('\n' + config.startIndent), 'block_banner');
+    return banner(this);
+}
+String.prototype.tag = function () {
+    return tag(this);
 }
