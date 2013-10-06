@@ -4,7 +4,7 @@ ciment
 `ciment` is a javascript comments library for generating comment string rapidly.
 
 ```javascript
-var comment = var comment = require('../ciment');
+var comment = var comment = require('ciment');
 
 // Comment module methods
 comment.single('hello world'); // result: "// hello world"
