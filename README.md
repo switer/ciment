@@ -1,0 +1,4 @@
+comments
+========
+
+JavaScript comments library
