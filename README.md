@@ -26,6 +26,12 @@ And use with `var comment = require("comment")`
 
 ## API
 
+### Base function
+```javascript
+comment.decomment(content);
+```
+Remove the first wrapper comment form this string
+
 ### Module function
 
 ```javascript
