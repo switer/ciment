@@ -20,10 +20,10 @@ comment.block('hello world'); // result: "/* hello world */"
 For [node](http://nodejs.org) with [npm](http://npmjs.org):
 
 ```bash
-npm install comment
+npm install ciment
 ```
 
-And use with `var comment = require("comment")`
+And use with `var comment = require("ciment")`
 
 ## API
 
