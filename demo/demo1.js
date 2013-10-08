@@ -12,3 +12,9 @@ console.log('hello world'.block());
 console.log('hello world'.title());
 console.log('hello world\nI am a programer'.banner());
 console.log('<div>hello world</div>'.tag());
+
+console.log('// <div>hello world</div>'.decomment());
+console.log('<!-- <div>hello world</div> -->'.decomment());
+console.log('/* <div>hello world</div> */'.decomment());
+console.log('/***** <div>hello /*world*/</div> *****/'.decomment());
+console.log('/**\n\n<div>helloworld\n</div>\n\n**/'.decomment());
