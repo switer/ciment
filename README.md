@@ -55,6 +55,14 @@ comment.banner("comment text\nhello world");
 ```
 Return a banner block comment string
 
+```javascript
+comment.tag("<div>comment text</div>");
+```
+```html
+<!-- <div>comment text</div> -->
+```
+Return a html tag comment string
+
 ### Prototype function
 
 ```javascript
@@ -78,6 +86,13 @@ Return a banner block comment string
 *    comment text
 *    hello world
 **/
+```
+
+```javascript
+"<div>comment text</div>".tag();
+```
+```html
+<!-- <div>comment text</div> -->
 ```
 
 
