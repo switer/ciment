@@ -1,7 +1,7 @@
 ciment
 ========
 
-`ciment` is a javascript comments library for generating comment string rapidly.
+`ciment` is a library for generating comment-String rapidly. Include javascript, CSS and HTML commnets manipulation.
 
 ```javascript
 var comment = var comment = require('ciment');
