@@ -1,10 +1,10 @@
 ciment
 ========
 
-`ciment` is a javascript comments library for generating comment string rapidly.
+`ciment` is a library for generating comment-String rapidly. Include javascript, CSS and HTML commnets manipulation.
 
 ```javascript
-var comment = var comment = require('ciment');
+var comment = require('ciment');
 
 // Comment module methods
 comment.single('hello world'); // result: "// hello world"
@@ -14,15 +14,16 @@ comment.block('hello world'); // result: "/* hello world */"
 'hello world'.single(); // result: "// hello world"
 'hello world'.block(); // result: "/* hello world */"
 
+'hello world'.block().decomment(); // result: "hello world"
 ```
 ## Install
 For [node](http://nodejs.org) with [npm](http://npmjs.org):
 
 ```bash
-npm install comment
+npm install ciment
 ```
 
-And use with `var comment = require("comment")`
+And use with `var comment = require("ciment")`
 
 ## API
 
