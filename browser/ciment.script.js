@@ -1,3 +1,5 @@
+window.ciment = window.ciment || {};
+(function (exports) {
 var comments = {
         'single': '// @',
         'block':  '/* @ */',
@@ -79,3 +81,4 @@ exports.block = block;
 exports.title = title;
 exports.banner = banner;
 exports.tag = tag;
+})(window.ciment);
