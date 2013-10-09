@@ -4,6 +4,7 @@ ciment
 `ciment` is a library for generating comment-String rapidly. Include javascript, CSS and HTML commnets manipulation.
 
 ```javascript
+// In nodejs
 var comment = require('ciment');
 
 // Comment module methods
@@ -17,13 +18,35 @@ comment.block('hello world'); // result: "/* hello world */"
 'hello world'.block().decomment(); // result: "hello world"
 ```
 ## Install
+
+### npm
 For [node](http://nodejs.org) with [npm](http://npmjs.org):
 
 ```bash
 npm install ciment
 ```
+And use with `var ciment = require("ciment")`
 
-And use with `var comment = require("ciment")`
+### browser
+```html
+<script src="browser/ciment.script.js"></script>
+<script>
+  var ciment = window.ciment,
+      commentStr = 'Hello world';
+    
+  commentStr = commentStr.title(); // '/*****  Hello world  *****/'
+  commentStr = ciment.decomment(commentStr); // 'Hello world'
+</script>
+```
+
+__Use with CMD:__
+```javascript
+define(function (require,exports,module) {
+  var ciment = require('ciment.cmd');
+  var banner = 'Hello world\nI am ciment'.banner();
+});
+```
+
 
 ## API
 
